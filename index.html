@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080d18">
+<meta name="description" content="SkyWatch UA — независимая информационная лента гражданских предупреждений из публичных источников.">
+<title>SkyWatch UA — Public Monitor</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+<header class="topbar">
+  <a class="brand" href="#"><span class="mark">✦</span><span><b>SKYWATCH <i>UA</i></b><small>PUBLIC INFORMATION MONITOR</small></span></a>
+  <div class="top-right"><span class="dot" id="dot"></span><span id="connection">ПОДКЛЮЧЕНИЕ</span><span class="clock" id="clock">--:--:--</span></div>
+</header>
+<main>
+<section class="hero"><div><div class="eyebrow">INDEPENDENT CIVIC MONITORING</div><h1>Информационная <em>лента Украины.</em></h1><p>Публичные сообщения, происхождение данных и осторожная классификация.</p></div><div class="live"><span></span> PUBLIC FEED</div></section>
+<section class="stats">
+  <article><small>СОБРАНО НАБЛЮДЕНИЙ</small><strong id="total">—</strong></article>
+  <article><small>НЕПОДТВЕРЖДЁННЫЕ</small><strong id="unverified">—</strong></article>
+  <article><small>ИСТОЧНИКОВ</small><strong id="sources">01</strong></article>
+  <article><small>ПОСЛЕДНЯЯ ПРОВЕРКА</small><strong class="small-value" id="updated">—</strong></article>
+</section>
+<section class="layout">
+  <section class="panel feed-panel">
+    <div class="heading"><div><div class="eyebrow">INCOMING OBSERVATIONS</div><h2>Лента сообщений</h2></div><button id="refresh">↻ Обновить</button></div>
+    <div class="filters"><input id="search" type="search" placeholder="Поиск по сообщению или области"><select id="filter"><option value="all">Все категории</option><option value="air_alert_report">Сообщения о тревоге</option><option value="alert_end_report">Сообщения об отбое</option><option value="general_warning">Общие предупреждения</option></select></div>
+    <div id="feed"><div class="empty">Загрузка сообщений...</div></div>
+  </section>
+  <aside class="side">
+    <section class="panel source-panel"><div class="eyebrow">CONNECTED SOURCE</div><h2>Telegram</h2><div class="source"><span class="telegram">➤</span><div><b>@raketa_trevoga</b><small>Публичный preview</small></div><span class="source-state">SOURCE</span></div><a href="https://t.me/raketa_trevoga" target="_blank" rel="noopener">Открыть канал ↗</a></section>
+    <section class="panel integrity"><div class="eyebrow">DATA INTEGRITY</div><h3>Как читать сообщения</h3><p>Все записи из Telegram имеют статус «неподтверждено». Классификатор помогает сортировать текст, но не устанавливает достоверность события.</p><p>Оперативные координаты, направления и точные места нахождения целей не публикуются.</p></section>
+    <section class="panel system"><div class="eyebrow">COLLECTOR STATUS</div><div class="row"><span>Публичный preview</span><b id="collector">ОЖИДАНИЕ</b></div><div class="row"><span>Последний сбор</span><b id="collectedAt">—</b></div><div class="row"><span>Хранилище</span><b>NETLIFY BLOBS</b></div></section>
+  </aside>
+</section>
+<section class="disclaimer"><b>⚠ ВАЖНОЕ ПРЕДУПРЕЖДЕНИЕ</b><p>SkyWatch UA — независимый информационный проект. Сервис не является официальным источником оповещения, не связан с государственными органами Украины и не гарантирует достоверность или своевременность сведений. Следите за официальными источниками информации. При воздушной тревоге соблюдайте указания органов власти и переходите в укрытие.</p></section>
+</main>
+<footer><b>SKYWATCH UA <span>v0.3</span></b><span>Неофициальный информационный сервис</span><a href="https://t.me/raketa_trevoga" target="_blank" rel="noopener">Источник ↗</a></footer>
+</div>
+<script src="app.js"></script>
+</body></html>
